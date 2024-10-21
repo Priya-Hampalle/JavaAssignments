@@ -1,0 +1,12 @@
+package com.ibm.expensetracker.service;
+
+import org.springframework.stereotype.Service;
+
+import com.ibm.expensetracker.entity.BankCustomerEntity;
+
+@Service
+public interface BankCustomerService {
+	
+	public void saveBankCustData(BankCustomerEntity banCustData) ;
+
+}

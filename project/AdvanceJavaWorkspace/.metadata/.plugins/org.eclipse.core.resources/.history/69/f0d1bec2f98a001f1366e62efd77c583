@@ -1,0 +1,35 @@
+package com.ibm.dcobankpro.entity;
+
+import java.util.HashSet;
+import java.util.Set;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Candidates")
+public class CandidateEntity{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long candidateId;
+    
+    @Column(name = "candidate_name", nullable = false)
+    private String candidateName;
+    
+    @ManyToMany
+    @JoinTable(
+        name = "Candidate_Courses",
+        joinColumns = @JoinColumn(name = "candidate_id"),
+        inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private Set<Course> courses = new HashSet<>();
+
+   
+}

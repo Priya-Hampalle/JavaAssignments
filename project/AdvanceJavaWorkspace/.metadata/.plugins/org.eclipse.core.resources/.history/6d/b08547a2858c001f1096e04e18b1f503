@@ -1,0 +1,5 @@
+package com.ibm.expensetracker.entity;
+
+public class BankCustomerEntity {
+
+}

@@ -1,0 +1,39 @@
+package com.ibm.expensetracker.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.ibm.expensetracker.entity.BankCustomerEntity;
+import com.ibm.expensetracker.repository.BankCustomerRepository;
+import com.ibm.expensetracker.service.BankCustomerService;
+
+@Component
+public class BankCustomerServiceImpl implements BankCustomerService {
+
+	@Autowired
+	private BankCustomerRepository bankCustomerRepository;
+	
+	@Override
+	public void saveBankCustData(BankCustomerEntity banCustData) {
+		
+
+		bankCustomerRepository.save(banCustData);
+		
+	}
+
+	@Override
+	public void updateBankCustData(BankCustomerEntity banCustData) {
+		
+		
+		bankCustomerRepository.save(banCustData);
+		
+	}
+
+	@Override
+	public void deleteBankCustData(BankCustomerEntity banCustData) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

@@ -1,0 +1,15 @@
+package com.ibm.expensetracker.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+@RequestMapping("/customer")
+
+public class BankCustomerController {
+@PostMapping("/save-customer")
+	public String saveCustomerData() {
+		return "Save customer data";
+	}
+}

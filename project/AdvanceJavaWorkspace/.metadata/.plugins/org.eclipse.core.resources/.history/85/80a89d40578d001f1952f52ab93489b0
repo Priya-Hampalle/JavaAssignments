@@ -1,0 +1,11 @@
+package com.ibm.expensetracker.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.ibm.expensetracker.entity.BankCustomerEntity;
+
+@Repository
+public interface BankCustomerRepository extends JpaRepository<BankCustomerEntity, Long>{
+
+}
